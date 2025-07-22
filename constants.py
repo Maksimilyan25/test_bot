@@ -1,15 +1,18 @@
 from pathlib import Path
 
+BASE_DIR = Path(__file__).parent
+MEDIA_URL = BASE_DIR / 'media'
 
-MAIN_URL = 'D:/Dev/bottest/app/media/'
-FILE_URL = Path(MAIN_URL + 'Бар инвентарь.pdf')
-FILE_ORDER = Path(MAIN_URL + 'Создание_Заказа_и_выставление_счёта.pdf')
-FILE_CREATE_NUM = Path(MAIN_URL + 'Создание номенклатуры.pdf')
-FILE_RETURN_ORDER = Path(MAIN_URL + 'Возврат от покупателя.pdf')
-FILE_INGREDIENTS = Path(MAIN_URL + 'Сиропы, топинги, пюре.pdf')
-FILE_CREATE_AGENT = Path(MAIN_URL + 'Создание контрагента.pdf')
-FILE_CREATE_OUT_ORDER = Path(MAIN_URL + 'Создание отгрузочной накладной.pdf')
-FILE_ROS = Path(MAIN_URL + 'Рестинтернешнл.docx')
+# Пути к файлам
+FILE_URL = MEDIA_URL / 'Бар инвентарь.pdf'
+FILE_ORDER = MEDIA_URL / 'Создание_Заказа_и_выставление_счёта.pdf'
+FILE_CREATE_NUM = MEDIA_URL / 'Создание номенклатуры.pdf'
+FILE_RETURN_ORDER = MEDIA_URL / 'Возврат от покупателя.pdf'
+FILE_INGREDIENTS = MEDIA_URL / 'Сиропы, топинги, пюре.pdf'
+FILE_CREATE_AGENT = MEDIA_URL / 'Создание контрагента.pdf'
+FILE_CREATE_OUT_ORDER = MEDIA_URL / 'Создание отгрузочной накладной.pdf'
+FILE_ROS = MEDIA_URL / 'Рестинтернешнл.docx'
+
 TEXT_CLEN = """
 1. В процессе принятия поставки склад выписывает недостающие/лишние/бракованные товары и записывает его в Яндекс документах 
 https://clck.ru/3GMy82 во вкладке «Клён», сообщает о необходимости в написании рекламации в отдельном чате «Рекламации» 
